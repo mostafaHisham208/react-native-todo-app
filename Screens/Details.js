@@ -7,7 +7,6 @@ const Details = () => {
     const {users}=useContext(usersContext)
     const {params}=useRoute();
     const [user,setUser]=useState();
-    // console.warn(users)
     useEffect(()=>{
         users.map((obj)=>obj.id===params?setUser(obj):obj)
     },[])
@@ -19,7 +18,7 @@ if (!user) return<Text>Loading....</Text>
             <Text>name :  {user.name}</Text>
             <Text>username :  {user.username}</Text>
             <Text>email :  {user.email}</Text>
-            <Text>{user.username}</Text>
+            <Text>phone: {user.phone}</Text>
 
 
         </View>
