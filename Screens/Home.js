@@ -10,20 +10,21 @@ const Home = () => {
     return (
         <View>
                <Pressable   onPress={()=>{navigate(routes.users)}}
-                style={({pressed})=>[styles.btnContainer2,{opacity:pressed?0.5:1}]}>
-                 <Text style={styles.txt}>users</Text>
-                </Pressable>
-                <Pressable   onPress={()=>{navigate(routes.camera)}}
-                style={({pressed})=>[styles.btnContainer2,{opacity:pressed?0.5:1}]}>
-                 <Text style={styles.txt}>open Camera</Text>
+                style={({pressed})=>[styles.btnContainer2,{opacity:pressed?0.5:1,backgroundColor:"#0b3173"}]}>
+                 <Text style={styles.txt}>Users</Text>
                 </Pressable>
                 <Pressable   onPress={()=>{navigate(routes.list)}}
-                style={({pressed})=>[styles.btnContainer2,{opacity:pressed?0.5:1}]}>
+                style={({pressed})=>[styles.btnContainer2,{opacity:pressed?0.5:1,backgroundColor:"#46212a"}	]}>
                  <Text style={styles.txt}>Section List</Text>
                 </Pressable>
+                <Pressable   onPress={()=>{navigate(routes.camera)}}
+                style={({pressed})=>[styles.btnContainer2,{opacity:pressed?0.5:1,backgroundColor:"#95205d"}]}>
+                 <Text style={styles.txt}>Open Camera</Text>
+                </Pressable>
+               
                 <Pressable   onPress={()=>{navigate(routes.todo)}}
-                style={({pressed})=>[styles.btnContainer2,{opacity:pressed?0.5:1}]}>
-                 <Text style={styles.txt}>todo List</Text>
+                style={({pressed})=>[styles.btnContainer2,{opacity:pressed?0.5:1,backgroundColor:"#e27e91"}]}>
+                 <Text style={styles.txt}>Todo Screen</Text>
                 </Pressable>
         
         </View>

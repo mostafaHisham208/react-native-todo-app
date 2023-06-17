@@ -1,24 +1,8 @@
-import { StatusBar } from "expo-status-bar";
 import {
-  Platform,
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  TextInput,
-  Button,
-  Alert,
-  TouchableOpacity,
-  TouchableWithoutFeedback,
-  Pressable,
-  FlatList,
-  SectionList,
+  SafeAreaView,StyleSheet
+
 } from "react-native";
-import styles from "./styles";
-import { useCallback, useState } from "react";
-import Box from "./components/Box";
+
 import { NavigationContainer } from "@react-navigation/native";
 import Root from "./Navigation/root";
 import UsersContextProvider from "./contexts/usersContextProvider";
@@ -29,13 +13,19 @@ export default function App() {
     <SafeAreaView style={styles.container}>
     <NavigationContainer>
       <Root></Root>
-    {/* 
-      
-     </SafeAreaView> */}
+
      </NavigationContainer>
      </SafeAreaView>
      </UsersContextProvider>
   );
 }
+
+const styles = StyleSheet.create({
+  container:{
+    flex:1,
+
+    marginTop: Platform.OS === "android" ? 40 : 0,
+  }
+})
 
 
